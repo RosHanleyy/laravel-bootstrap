@@ -14,10 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Repair_Description', function (Blueprint $table) {
-            $table->integer('id', true);
+            $table->unsignedInteger('id', true);
             $table->char('title', 50);
             $table->string('description', 500);
-            $table->integer('device_id')->index('device_connect');
+            $table->unsignedInteger('device_id')->unsignedInteger();
             $table->foreign('device_id')->references('id')->on('Device');
         });
     }

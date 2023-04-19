@@ -13,11 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('Role', function (Blueprint $table) {
+        Schema::create('Employee_Appointment', function (Blueprint $table) {
             $table->unsignedInteger('id', true);
-            $table->string('position', 50);
+            $table->unsignedInteger('employee_id')->unsignedInteger();
+            $table->unsignedInteger('appointment_id')->unsignedInteger();
+            $table->foreign('employee_id')->references('id')->on('Employee');
+            $table->foreign('appointment_id')->references('id')->on('Appointment');
         });
-}
+    }
 
     /**
      * Reverse the migrations.
@@ -26,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Role');
+        Schema::dropIfExists('Employee_Appointment');
     }
 };

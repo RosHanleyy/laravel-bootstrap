@@ -11,13 +11,14 @@ return new class extends Migration
      *
      * @return void
      */
+    
     public function up()
     {
         Schema::create('Device', function (Blueprint $table) {
-            $table->integer('id', true);
+            $table->unsignedInteger('id', true);
             $table->char('model', 100);
             $table->string('description', 500);
-            $table->integer('image_id')->index('image_connect');
+            $table->unsignedInteger('image_id')->unsignedInteger();
             $table->foreign('image_id')->references('id')->on('Image');
         });
     }

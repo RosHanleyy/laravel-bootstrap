@@ -14,12 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Employee', function (Blueprint $table) {
-                $table->integer('id', true);
+                $table->unsignedInteger('id', true);
                 $table->char('first_name', 50);
                 $table->char('second_name', 50);
                 $table->bigInteger('phone');
                 $table->char('email', 100);
-                $table->integer('role_id')->index('role_connect');
+                $table->unsignedInteger('role_id')->unsignedInteger();
                 $table->foreign('role_id')->references('id')->on('Role');
         });
     }

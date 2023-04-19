@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Branch', function (Blueprint $table) {
-            $table->integer('id', true);
+            $table->unsignedInteger('id', true);
             $table->char('city', 50);
             $table->string('address', 100);
         });

@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Image', function (Blueprint $table) {
-            $table->integer('id', true);
+            $table->unsignedInteger('id', true);
             $table->string('image', 100);
             $table->string('brand', 50);
         });

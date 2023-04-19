@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Repairs R Us</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -30,24 +30,17 @@
                 <div class="row">
                     <div>
 
-                        <div class="row row-cols-1 row-cols-md-2 g-4 mt-5 mx-3">
+                        <div class="row row-cols-1 row-cols-md-1 g-4 mt-5 mx-3">
                             <div class="col ">
                                 <div class="h2 d-flex justify-content-center">
                                     Why Repair with us?
                                 </div>
-                                <div class="h4 text-center d-flex justify-content-center">
+                                <div class="h4 text-center d-flex justify-content-center ">
+                                    <div class="w-50">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus
                                     consequat vulputate. In maximus tempus tortor, id gravida eros mollis eu.
+                                    </div>
                                 </div>
-
-                            </div>
-                            <div class="col">
-                                <div class="d-flex justify-content-center">
-                                    <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png"
-                                        class="w-50 d-flex justify-content-center" width="" alt="...">
-                                </div>
-                            </div>
-                        </div>
 
                         <div class="row row-cols-1 mt-5">
                             <div class="col">
@@ -62,11 +55,7 @@
                             <div class="col m-0">
                                 <div class="py-2 mx-4">
                                     <div class="card w-75 border-0 rounded-0">
-                
-                                        echo <img src="{{url('\storage\images\iPhone_SE.jpg')}};"
-                                            class="card-img-top rounded-0" alt="Image">
-                                        
-                                            <div class="card-body bg-primary d-flex justify-content-center p-0">
+                                                            <div class="card-body bg-primary d-flex justify-content-center p-0">
                                             <a href="#" class="btn btn-primary m-0 py-2 px-0 rounded-0">Go somewhere</a>
                                         </div>
                                     </div>
@@ -77,8 +66,6 @@
                             <div class="col m-0">
                                 <div class="py-2 mx-4">
                                     <div class="card w-75 border-0 rounded-0">
-                                        <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png"
-                                            class="card-img-top rounded-0" alt="...">
                                         <div class="card-body bg-primary d-flex justify-content-center p-0">
                                             <a href="#" class="btn btn-primary m-0 py-2 px-0 rounded-0">Go somewhere</a>
                                         </div>
@@ -88,8 +75,6 @@
                             <div class="col m-0">
                                 <div class="py-2 mx-4">
                                     <div class="card w-75 border-0 rounded-0">
-                                        <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png"
-                                            class="card-img-top rounded-0" alt="...">
                                         <div class="card-body bg-primary d-flex justify-content-center p-0">
                                             <a href="#" class="btn btn-primary m-0 p-2 px-0 rounded-0">Go somewhere</a>
                                         </div>
@@ -99,8 +84,6 @@
                             <div class="col m-0">
                                 <div class="py-2 mx-4">
                                     <div class="card w-75 border-0 rounded-0">
-                                        <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png"
-                                            class="card-img-top rounded-0" alt="...">
                                         <div class="card-body bg-primary d-flex justify-content-center p-0">
                                             <a href="#" class="btn btn-primary m-0 p-2 px-0 rounded-0">Go somewhere</a>
                                         </div>
@@ -110,8 +93,6 @@
                             <div class="col m-0">
                                 <div class="py-2 mx-4">
                                     <div class="card w-75 border-0 rounded-0">
-                                        <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png"
-                                            class="card-img-top rounded-0" alt="...">
                                         <div class="card-body bg-primary d-flex justify-content-center p-0">
                                             <a href="#" class="btn btn-primary m-0 p-2 px-0 rounded-0">Go somewhere</a>
                                         </div>
@@ -161,54 +142,13 @@
    </div>
  @endif
 
- <div class="container">
-       
-       <div class="panel panel-primary">
-     
-         <div class="panel-heading">
-           <h2>Laravel 9 Image Upload Example - ItSolutionStuff.com</h2>
-         </div>
-    
-         <div class="panel-body">
-          
-           @if ($message = Session::get('success'))
-           <div class="alert alert-success alert-block">
-               <button type="button" class="close" data-dismiss="alert">×</button>
-                   <strong>{{ $message }}</strong>
-           </div>
-           <img src="images/{{ Session::get('image') }}">
-           @endif
-         
-           <form action="{{ route('image.store') }}" method="POST" enctype="multipart/form-data">
-               @csrf
-     
-               <div class="mb-3">
-                   <label class="form-label" for="inputImage">Image:</label>
-                   <input 
-                       type="file" 
-                       name="image" 
-                       id="inputImage"
-                       class="form-control @error('image') is-invalid @enderror">
-     
-                   @error('image')
-                       <span class="text-danger">{{ $message }}</span>
-                   @enderror
-               </div>
-      
-               <div class="mb-3">
-                   <button type="submit" class="btn btn-success">Upload</button>
-               </div>
-          
-           </form>
-         
-         </div>
-       </div>
-   </div>    
 
 
+@include('layouts.footer')
             @endsection
 
-            
+
+          
         </body>
 
         </html>

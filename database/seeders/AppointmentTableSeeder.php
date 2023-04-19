@@ -25,7 +25,7 @@ class AppointmentTableSeeder extends Seeder
                 'date_booked' => '2023-04-01',
                 'date_recieved' => '2023-04-03',
                 'repair_id' => 1,
-                'customer_id' => 1,
+                'user_id' => 1,
             ),
             1 => 
             array (
@@ -33,7 +33,7 @@ class AppointmentTableSeeder extends Seeder
                 'date_booked' => '2023-04-04',
                 'date_recieved' => '2023-04-07',
                 'repair_id' => 2,
-                'customer_id' => 2,
+                'user_id' => 1,
             ),
         ));
         

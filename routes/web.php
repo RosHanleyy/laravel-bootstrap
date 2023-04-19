@@ -21,7 +21,9 @@ Route::get('/', function () {
 Auth::routes();
 
 
+Route::get('/placeholder', [App\Http\Controllers\HomeController::class, 'placeholderNew'])->name('placeholder');
+
 Route::controller(ImageController::class)->group(function(){
-    Route::get('image-upload', [ImageController::Class, 'show']);
-    Route::post('image-upload', [ImageController::Class, 'store'])->name('image.store');
+    Route::get('image-upload', [ImageController::class, 'show']);
+    Route::post('image-upload', [ImageController::class, 'store'])->name('image.store');
 });
