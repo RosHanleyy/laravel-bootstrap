@@ -16,11 +16,10 @@ return new class extends Migration
         Schema::create('Appointment', function (Blueprint $table) {
             $table->unsignedInteger('id', true);
             $table->date('date_booked');
-            $table->date('date_recieved');
             $table->unsignedInteger('repair_id')->unsignedInteger();
             $table->unsignedInteger('user_id')->unsignedInteger();
             $table->foreign('repair_id')->references('id')->on('Repair_Description');
-            $table->foreign('user_id')->references('id')->on('Users');
+            $table->foreign('user_id')->references('id')->on('User');
         });
     }
 

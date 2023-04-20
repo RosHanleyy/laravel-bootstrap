@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class EmployeeTableSeeder extends Seeder
+class UserTableSeeder extends Seeder
 {
 
     /**
@@ -16,9 +16,9 @@ class EmployeeTableSeeder extends Seeder
     {
         
 
-        \DB::table('Employee')->delete();
+        \DB::table('User')->delete();
         
-        \DB::table('Employee')->insert(array (
+        \DB::table('User')->insert(array (
             0 => 
             array (
                 'id' => 1,
@@ -26,6 +26,7 @@ class EmployeeTableSeeder extends Seeder
                 'second_name' => 'Robson',
                 'phone' => 875382275,
                 'email' => 'loisrobsone@gmail.com',
+                'password'=> '12345678',
                 'role_id' => 1,
             ),
             1 => 
@@ -35,16 +36,8 @@ class EmployeeTableSeeder extends Seeder
                 'second_name' => 'Danilovs',
                 'phone' => 8912334356,
                 'email' => 'denissdanilovs@gmail.com',
+                'password' => '12345678',
                 'role_id' => 2,
-            ),
-            2 => 
-            array (
-                'id' => 3,
-                'first_name' => 'Philip',
-                'second_name' => 'Hanley',
-                'phone' => 867483753,
-                'email' => 'philiphanley@gmail.com',
-                'role_id' => 3,
             ),
         ));
         

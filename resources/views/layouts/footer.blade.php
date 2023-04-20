@@ -28,7 +28,7 @@
                     <li><a href='#' class='text-white text-decoration-none'>About Us</a></li>
                     <li><a href='#' class='text-white text-decoration-none'>International Repairs</a></li>
                     <li><a href='#' class='text-white text-decoration-none'>FAQ</a></li>
-                    <li><a href="{{ route('placeholder') }}" class='text-white text-decoration-none'>Book an appointment</a></li>
+                    <li><a href="#" class='text-white text-decoration-none'>Book an appointment</a></li>
                 </ul>
         </div>
         <div class='col'>

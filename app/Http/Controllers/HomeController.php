@@ -26,8 +26,8 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function placeholder()
+    public function show()
     {
-        return view('dashboard.placeholder');
+        return view('admin.welcome');
     }
 }

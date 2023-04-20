@@ -23,7 +23,6 @@ class AppointmentTableSeeder extends Seeder
             array (
                 'id' => 1,
                 'date_booked' => '2023-04-01',
-                'date_recieved' => '2023-04-03',
                 'repair_id' => 1,
                 'user_id' => 1,
             ),
@@ -31,7 +30,6 @@ class AppointmentTableSeeder extends Seeder
             array (
                 'id' => 2,
                 'date_booked' => '2023-04-04',
-                'date_recieved' => '2023-04-07',
                 'repair_id' => 2,
                 'user_id' => 1,
             ),

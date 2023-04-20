@@ -18,8 +18,7 @@ return new class extends Migration
             $table->unsignedInteger('id', true);
             $table->char('model', 100);
             $table->string('description', 500);
-            $table->unsignedInteger('image_id')->unsignedInteger();
-            $table->foreign('image_id')->references('id')->on('Image');
+
         });
     }
 

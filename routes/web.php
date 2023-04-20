@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ImageController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,12 +18,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
+
+
 Auth::routes();
 
 
-Route::get('/placeholder', [App\Http\Controllers\HomeController::class, 'placeholderNew'])->name('placeholder');
+Route::view('admin/welcome', [HomeController::class, 'show']);
 
-Route::controller(ImageController::class)->group(function(){
-    Route::get('image-upload', [ImageController::class, 'show']);
-    Route::post('image-upload', [ImageController::class, 'store'])->name('image.store');
-});
+

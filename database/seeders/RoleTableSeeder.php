@@ -22,20 +22,13 @@ class RoleTableSeeder extends Seeder
             0 => 
             array (
                 'id' => 1,
-                'position' => 'Manager',
+                'position' => 'User',
             ),
             1 => 
             array (
                 'id' => 2,
-                'position' => 'Technician',
+                'position' => 'Admin',
             ),
-            2 => 
-            array (
-                'id' => 3,
-                'position' => 'Communications',
-            ),
-        ));
-        
-        
+        ));  
     }
 }

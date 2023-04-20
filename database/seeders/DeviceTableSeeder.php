@@ -24,14 +24,12 @@ class DeviceTableSeeder extends Seeder
                 'id' => 1,
                 'model' => 'iPhone 14 Pro Max',
                 'description' => 'Black, 128GB, E-SIM',
-                'image_id' => 1,
             ),
             1 => 
             array (
                 'id' => 2,
                 'model' => 'Samsung Galaxy S22 Ultra',
                 'description' => 'Black, 256GB, E-SIM/Physical SIM',
-                'image_id' => 2,
             ),
         ));
         
